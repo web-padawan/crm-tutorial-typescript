@@ -1,6 +1,10 @@
 {
   "name": "no-name",
   "license": "UNLICENSED",
+  "scripts": {
+    "debug": "web-test-runner --node-resolve frontend/test/*.test.js --watch",
+    "test": "web-test-runner --node-resolve frontend/test/*.test.js"
+  },
   "dependencies": {
     "@vaadin/router": "1.7.2",
     "@vaadin/vaadin-charts": "7.0.0-alpha3",
@@ -44,12 +48,18 @@
     "@vaadin/vaadin-avatar": "2.0.0-alpha1"
   },
   "devDependencies": {
+    "@esm-bundle/chai": "4.3.0",
+    "@open-wc/testing-helpers": "^1.8.0",
+    "@web/dev-server-esbuild": "^0.2.11",
+    "@web/test-runner": "^0.12.15",
     "awesome-typescript-loader": "5.2.1",
     "compression-webpack-plugin": "4.0.1",
     "copy-webpack-plugin": "5.1.2",
     "html-webpack-plugin": "3.2.0",
     "prettier-plugin-java": "^0.7.1",
     "raw-loader": "4.0.0",
+    "rollup": "^2.39.0",
+    "rollup-plugin-lit-css": "^2.0.5",
     "script-ext-html-webpack-plugin": "2.1.4",
     "typescript": "4.0.3",
     "webpack": "4.42.0",
@@ -150,6 +160,6 @@
       "loader-utils": "1.4.0",
       "construct-style-sheets-polyfill": "2.4.2"
     },
-    "hash": "2963f9300eb8211c33d3f3fb9663668e179eb83fba88bfe0a3e0a54c529d24ed"
+    "hash": "ae9dd26ac5ad98b54c40674960e62a9939107bdd08eea5031b46362f5d8f0a58"
   }
 }
