@@ -2,9 +2,7 @@
   "name": "no-name",
   "license": "UNLICENSED",
   "scripts": {
-    "cypress:run": "cypress run",
-    "start": "mvn spring-boot:run",
-    "e2e": "start-server-and-test start http://localhost:8080 cypress:run"
+    "e2e": "cypress run"
   },
   "dependencies": {
     "@vaadin/router": "1.7.2",

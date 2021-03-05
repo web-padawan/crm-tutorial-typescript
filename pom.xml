@@ -237,6 +237,31 @@
                             <enableAssertions>true</enableAssertions>
                         </configuration>
                     </plugin>
+                    <plugin>
+                        <groupId>com.github.eirslett</groupId>
+                        <artifactId>frontend-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>install-node-and-npm</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>cypress tests</id>
+                                <goals>
+                                    <goal>npm</goal>
+                                </goals>
+                                <phase>integration-test</phase>
+                                <configuration>
+                                    <arguments>run e2e</arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <skip>${skipTests}</skip>
+                            <nodeVersion>v14.15.4</nodeVersion>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
